@@ -8,7 +8,6 @@ from PIL import Image
 import time
 import os
 
-run=True
 pytesseract.pytesseract.tesseract_cmd = r'ocr_dir\tesseract.exe'
 def type():
     typer=True
@@ -18,6 +17,7 @@ def type():
             with open('text_given.txt','r+')as f:
                 data=f.readlines()
             data = ' '.join([d.strip() for d in data])
+            print('Typing Text: ')
             print(data)
             for i in data:
                 pyautogui.press(i,interval=0.0005,_pause=False)
@@ -40,6 +40,7 @@ def takeimage(initial,final):
     if '|' or '| ' in data:
         data=data.replace('|','I')
         data=data.replace('| ','I')
+    print('Extracted Text: ')
     print(data)
     with open('text_given.txt','w+')as f:
         f.writelines(data)
@@ -47,21 +48,49 @@ def takeimage(initial,final):
     type()
 
 
-print('Press T on top left and B on buttom right')
-flag1=0
-flag2=0
 
-while run:
-    if keyboard.is_pressed('T'):
-        init=pyautogui.position()
-        flag1=1
+def main_code():
+    os.system('cls')
+    run=True
+    print('Press [ on top left and ] on buttom right')
+    flag1=0
+    flag2=0
+    flagR=0
+    while run:
+        if keyboard.is_pressed('['):
+            init=pyautogui.position()
+            flag1=1
 
-    if keyboard.is_pressed('B'):
-        final=pyautogui.position()
-        flag2=1
+        if keyboard.is_pressed(']'):
+            final=pyautogui.position()
+            flag2=1
 
-    if flag1==1 and flag2==1:
-        print('Image phase begin')
-        takeimage(init,final)
-        flag1=0
-        flag2=0
+        if keyboard.is_pressed('Ctrl'):
+            print('Restarting')
+            flagR=1
+            run=False
+            return flagR
+
+        if keyboard.is_pressed('Esc'):
+            
+            flagR=0
+            print('Exiting')
+            run=False
+            return flagR
+
+        if flag1==1 and flag2==1:
+            print('Image phase begin')
+            #try:
+            takeimage(init,final)
+            flagR=1
+            run=False
+  #          except:
+  #              print('Error')
+  #              flagR=1
+  #              run=False
+            return flagR
+
+
+flagR=main_code()
+while flagR==1:
+    flagR=main_code()
