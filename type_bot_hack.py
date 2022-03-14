@@ -9,7 +9,7 @@ import time
 import os
 
 run=True
-
+pytesseract.pytesseract.tesseract_cmd = r'ocr_dir\tesseract.exe'
 def type():
     typer=True
     while typer:
