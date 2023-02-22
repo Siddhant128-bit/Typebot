@@ -19,3 +19,12 @@ Put it in the same path as the script typebot_hack.py
   <p> Folder Structure should be of this particular format </p>
 
 <h3 align='center'> Running it </h3>
+<p> Follow these steps to run this properly 
+  <ul>
+    <li> Activate vertual env using anaconda prompt or run command prompt </li>
+    <li> run this command " pip install -r requirements.txt " </li>
+    <li> run "python type_bot_hack.py" </li>
+    <li> Press '[' on top left and ']' on buttom right of the text </li>
+  </ul>
+</p>
+              
