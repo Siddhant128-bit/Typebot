@@ -30,5 +30,5 @@ Put it in the same path as the script typebot_hack.py
   if Everything goes smoothely and it should we will have a running system capable of typing everything In the type racer
 </p>
 
-<p align='center'><b> Note: </b> If you are downloading tesseract.exe on your own please download the latest version as the previous version might cause alot of recognition error </p>
+<br><p align='center'><b> Note: </b> If you are downloading tesseract.exe on your own please download the latest version as the previous version might cause alot of recognition error </p>
               
