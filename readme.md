@@ -25,6 +25,8 @@ Put it in the same path as the script typebot_hack.py
     <li> run this command " pip install -r requirements.txt " </li>
     <li> run "python type_bot_hack.py" </li>
     <li> Press '[' on top left and ']' on buttom right of the text </li>
+    <li> Move the mouse to the typing area click on it and press "Enter" </li>
   </ul>
+  if Everything goes smoothely and it should we will have a running system capable of typing everything we type.
 </p>
               
