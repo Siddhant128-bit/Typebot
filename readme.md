@@ -1,4 +1,4 @@
-<h2> Typebot </h2>
+<h2 align='center'> Typebot </h2>
 <lr><br>
 This code was written by Siddhant Sharma. It focuses on Using Pytessaract to create type bot, 
 the concept is that you press "[" on top left and "]" on buttom right.
@@ -17,3 +17,5 @@ Put it in the same path as the script typebot_hack.py
 
   
   <p> Folder Structure should be of this particular format </p>
+
+<h3 align='center'> Running it </h3>
