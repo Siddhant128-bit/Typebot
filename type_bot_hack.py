@@ -25,6 +25,7 @@ def type():
             typer=False
     os.remove('text_given.txt')
 
+
 def takeimage(initial,final):
     image=pyautogui.screenshot()
     x1=initial.x
@@ -33,6 +34,8 @@ def takeimage(initial,final):
     y2=final.y
     image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
     image=image[y1-10:y2+10,x1-10:x2+10]
+    image=cv2.bilateralFilter(image,9,175,175)
+    image= cv2.bitwise_not(image)
     cv2.imshow('image',image)
     cv2.waitKey(0)
     data=pytesseract.image_to_string(image)
