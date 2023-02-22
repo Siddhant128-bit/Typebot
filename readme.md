@@ -14,3 +14,4 @@ https://drive.google.com/drive/folders/1CoTgWvQPhV4-yNMZA58p1gz78y6JIpfL?usp=sha
 Put it in the same path as the script typebot_hack.py
 
 
+![image](https://user-images.githubusercontent.com/80937266/220747124-a17eaf4f-824d-413e-b4da-8b3bc4ca2dee.png)
