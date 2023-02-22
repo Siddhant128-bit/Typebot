@@ -8,6 +8,8 @@ from PIL import Image
 import time
 import os
 
+#If you are downloading tesseract.exe please download version above 5.0.0
+
 pytesseract.pytesseract.tesseract_cmd = r'ocr_dir\tesseract.exe'
 def type():
     typer=True
@@ -34,6 +36,7 @@ def takeimage(initial,final):
     y2=final.y
     image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
     image=image[y1-10:y2+10,x1-10:x2+10]
+    image=cv2.resize(image, (image.shape[1]*2,image.shape[0]*2), interpolation = cv2.INTER_AREA)
     image=cv2.bilateralFilter(image,9,175,175)
     image= cv2.bitwise_not(image)
     cv2.imshow('image',image)
