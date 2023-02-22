@@ -7,6 +7,10 @@ buttom right.
 
 The idea is to take the screenshot of the area of interest which will be converted to text from image and can be typed at high speed pace.
 
-Their is few dependencies requried to run this incase it doesn't run please do contact me will provide the remaining dependencies 
+To Run this script you also need to have a specific folder present for that please download the folder from the link: 
+
+https://drive.google.com/drive/folders/1CoTgWvQPhV4-yNMZA58p1gz78y6JIpfL?usp=sharing
+
+Put it in the same path as the script typebot_hack.py
 
 
