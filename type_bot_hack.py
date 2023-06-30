@@ -13,6 +13,7 @@ import os
 pytesseract.pytesseract.tesseract_cmd = r'ocr_dir\tesseract.exe'
 def type():
     typer=True
+
     while typer:
         if keyboard.is_pressed('Enter'):
             time.sleep(0.5)
@@ -21,9 +22,12 @@ def type():
             data = ' '.join([d.strip() for d in data])
             print('Typing Text: ')
             print(data)
-            for i in data:
-                pyautogui.press(i,interval=0.0005,_pause=False)
-
+            for indx,i in enumerate(data):
+                pyautogui.press(i,_pause=False)
+                #Adding th is piece of code to bypass the latest patch by the site.
+                if indx%5==0:
+                    time.sleep(0.025)
+                ##################################################################
             typer=False
     os.remove('text_given.txt')
 
